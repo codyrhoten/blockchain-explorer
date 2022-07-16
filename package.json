@@ -19,6 +19,7 @@
   "homepage": "https://github.com/codyrhoten/blockchain-explorer#readme",
   "dependencies": {
     "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
     "js-sha256": "^0.9.0"
   }
 }
