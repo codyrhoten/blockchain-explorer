@@ -1,8 +1,9 @@
 const hash = require('hash.js');
 
 module.exports = class Transaction {
-    constructor(amount, hash, recipient, sender, timestamp) {
+    constructor(amount, fee, hash, recipient, sender, timestamp) {
         this.amount = amount;
+        this.fee = fee;
         this.hash = hash;
         this.recipient = recipient;
         this.sender = sender;
@@ -14,6 +15,7 @@ module.exports = class Transaction {
     calculateHash() {
         let txData = {
             'amount': this.amount,
+            'fee': this.fee,
             'recipient': this.recipient,
             'sender': this.sender,
             'timestamp': this.timestamp
